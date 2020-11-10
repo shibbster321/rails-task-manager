@@ -1,0 +1,9 @@
+<h1 class='mb-4'>My Tasks</h1>
+
+<%= form_for(@task, html: {class: 'form-group p-2'}) do |f| %>
+  <%= f.label(:title) %>
+  <%= f.text_field(:title, {class: 'form-control'}) %>
+  <%= f.label(:details) %>
+  <%= f.text_field(:details, {class: 'form-control'}) %>
+  <%= f.submit({class: 'my-2par'}) %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1 class='mb-4'>My Tasks</h1>
+<% @tasks.each do |item| %>
+    <div class="d-flex border rounded w-50 shadow-sm m-2 pl-2 pt-2">
+      <p class='pr-2'><%= check_box(item, :completed) %></p>
+      <%= link_to "#{item.title}", task_path(item), class: "badge" %>    
+     <p> - <%= item.completed %></p>
+    </div>
+<% end %>
+
+<%# (class: 'back-btn' %>
+<%# checkbox dynamic %>
